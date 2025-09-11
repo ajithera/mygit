@@ -8,3 +8,10 @@ Evaluate
 Iterate
 
 "Thoughtfully Create Really Excellent Inputs"
+
+Task - 
+Assigning persona.
+Required output format.
+Example
+
+Context -

@@ -1,5 +1,5 @@
 11/09/2025
-Tokenization:
+Tokenization:Splitting words into tokens.
 
 Once the prompt is given to LLM,
 The first step is to convert those prompt text into tokens.
@@ -28,3 +28,14 @@ Tokenization is always depends on tokanizer and its training data.
 Note : Tokenizer training is separate from LLM model training.
 Tokenizer = dictionary builder (decides the “alphabet” of tokens).
 LLM = storyteller (uses that alphabet to learn language patterns).
+
+NO NEED TO DEEP DIVE INTO TOKENIZATION METHODS AND STRATEGIES FOR AGENTIC AI APPLICATIONS !
+TOKENIZATION IS BUNDLES WITH LLM MODEL WE CAN NOT CONFIGURE IT! 
+
+WHAT WE NEED TO KNOW WHEN DEVELOPING AI APPLICATIONS:
+Token limits(8k, 32k, 128k)
+Token Cost.(API pricing is per token)
+Rough token to word ratio.(1 token = 3 to 4 characters of english)
+Example:
+A 1000-word essay ≈ 1300–1500 tokens.
+If LLM has a 4k token limit, it can handle ~2500–3000 words max in one go.

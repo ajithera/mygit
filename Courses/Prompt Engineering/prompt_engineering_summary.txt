@@ -1,0 +1,235 @@
+CODE GENERATION PROMPTING GUIDE: THE 5-STEP FRAMEWORK
+
+INTRODUCTION
+
+In the world of software development, generating clean, efficient code is crucial to project success. 
+Whether you're building APIs, creating user interfaces, or writing automation scripts, 
+generative AI can be a powerful coding companion—but only if you know how to communicate with it effectively.
+
+This guide introduces a proven 5-step framework for creating effective prompts when using AI for code generation. 
+By following this systematic approach, you'll get more accurate, useful, and production-ready code from AI tools.
+
+THE FRAMEWORK: TCREI
+
+Remember this phrase: "Thoughtfully Create Really Excellent Inputs"
+
+- T - Task
+- C - Context  
+- R - References
+- E - Evaluate
+- I - Iterate
+
+=================================================================
+
+STEP 1: TASK - DEFINE WHAT YOU WANT THE AI TO BUILD
+
+The task is the foundation of your prompt. 
+You need to clearly describe what code you want the AI to generate, including:
+
+SPECIFY THE PERSONA
+Tell the AI what kind of developer expertise to draw from:
+- "Act as a senior Python developer with expertise in API design"
+- "You're a frontend specialist with 10 years of React experience"
+- "Assume the role of a DevOps engineer focused on automation"
+
+DEFINE THE OUTPUT FORMAT
+Be specific about how you want the code delivered:
+- "Provide the complete function with docstrings and type hints"
+- "Generate a modular solution with separate files for each component"
+- "Create a step-by-step implementation with explanatory comments"
+
+EXAMPLE TASK PROMPTS:
+
+Weak: "Write a function to process data"
+
+Strong: "As a senior Python developer, create a robust data processing function that handles CSV files. 
+Include proper error handling, type hints, and comprehensive docstrings. Format the output as a complete module with example usage."
+
+=================================================================
+
+STEP 2: CONTEXT - PROVIDE THE TECHNICAL BACKGROUND
+
+Context transforms generic code into solutions tailored to your specific situation. 
+Include details about:
+TECHNICAL ENVIRONMENT
+- Programming language and version
+- Framework or library constraints
+- Performance requirements
+- Security considerations
+BUSINESS REQUIREMENTS
+- What problem you're solving
+- Expected input/output
+- Scale and performance needs
+- Integration requirements
+
+EXAMPLE WITH CONTEXT:
+
+Task: Create a REST API endpoint for user authentication
+
+Context: This is for a microservices architecture using FastAPI and Python 3.11. 
+The system handles 10,000+ concurrent users and requires JWT token-based authentication. 
+The endpoint must integrate with our existing PostgreSQL user database and return standardized JSON responses. 
+Security is critical as this handles financial data. Performance target is sub-100ms response time.
+
+=================================================================
+
+STEP 3: REFERENCES - SHOW EXAMPLES OF WHAT YOU WANT
+
+References guide the AI toward your preferred coding style and patterns. 
+Provide 2-5 examples when possible.
+
+TYPES OF REFERENCES FOR CODE GENERATION:
+
+EXISTING CODE EXAMPLES
+
+# Reference: Here's our existing error handling pattern
+def validate_user_input(data):
+    try:
+        # Validation logic here
+        return {"success": True, "data": processed_data}
+    except ValidationError as e:
+        logger.error(f"Validation failed: {str(e)}")
+        return {"success": False, "error": str(e)}
+
+API RESPONSE FORMATS
+
+// Reference: Our standard API response format
+{
+    "status": "success",
+    "data": {},
+    "metadata": {
+        "timestamp": "2024-01-15T10:30:00Z",
+        "version": "v1.2"
+    }
+}
+
+CODE STYLE PREFERENCES
+
+// Reference: We prefer this naming convention and structure
+const userAuthService = {
+    async authenticateUser(credentials) {
+        // Implementation here
+    },
+    
+    generateTokens(userId) {
+        // Implementation here  
+    }
+};
+
+=================================================================
+
+STEP 4: EVALUATE - REVIEW THE GENERATED CODE
+
+Before implementing AI-generated code, systematically evaluate:
+
+FUNCTIONALITY
+- Does the code solve the stated problem?
+- Are all requirements addressed?
+- Does it handle edge cases appropriately?
+
+CODE QUALITY
+- Is the code readable and well-structured?
+- Are there proper error handling mechanisms?
+- Does it follow best practices for the language/framework?
+
+INTEGRATION
+- Will this code work with your existing codebase?
+- Are dependencies appropriate and available?
+- Does it match your team's coding standards?
+
+SECURITY & PERFORMANCE
+- Are there potential security vulnerabilities?
+- Will this code perform adequately at scale?
+- Are there any obvious optimization opportunities?
+
+=================================================================
+
+STEP 5: ITERATE - REFINE UNTIL PERFECT
+
+AI code generation is rarely perfect on the first try. Use an iterative approach:
+
+COMMON ITERATION PATTERNS:
+
+ADD SPECIFICITY:
+"The function works but needs better error handling for network timeouts and rate limiting scenarios."
+
+ADJUST ARCHITECTURE:
+"Convert this from a single function to a class-based approach with separate methods for validation, processing, and response formatting."
+
+IMPROVE PERFORMANCE:
+"Optimize this code for handling large datasets (1M+ records). Consider using generators and batch processing."
+
+ENHANCE SECURITY:
+"Add input sanitization and SQL injection protection to this database query function."
+
+=================================================================
+
+PRACTICAL EXAMPLE: BUILDING A FILE UPLOAD API
+
+Let's see the framework in action:
+
+INITIAL PROMPT (TASK ONLY):
+Create an API endpoint for file uploads
+
+ADDING CONTEXT:
+Create a FastAPI endpoint for file uploads. 
+The system needs to handle PDF and image files up to 10MB, 
+validate file types, store files in AWS S3, and return upload confirmation with file URLs. 
+This is for a document management system used by legal teams.
+
+ADDING REFERENCES:
+Use this error handling pattern from our existing codebase:
+
+@app.exception_handler(ValidationException)
+async def validation_exception_handler(request, exc):
+    return JSONResponse(
+        status_code=400,
+        content={"error": "validation_failed", "message": str(exc)}
+    )
+
+Follow this response format:
+{
+    "success": true,
+    "file_id": "uuid-string",
+    "download_url": "https://...",
+    "metadata": {
+        "filename": "document.pdf",
+        "size": 1024000,
+        "upload_timestamp": "2024-01-15T10:30:00Z"
+    }
+}
+
+EVALUATION & ITERATION:
+After reviewing the generated code, you might iterate with:
+"Add virus scanning before S3 upload and implement progress tracking for large files."
+
+=================================================================
+
+BEST PRACTICES FOR CODE GENERATION PROMPTS
+
+START SIMPLE, BUILD COMPLEXITY
+Begin with basic functionality and gradually add features through iteration rather than trying to specify everything upfront.
+
+BE SPECIFIC ABOUT ERROR HANDLING
+Always specify how you want errors handled, as this is often overlooked in initial generations.
+
+INCLUDE TESTING REQUIREMENTS
+Ask for unit tests, example usage, or test data along with the main code.
+
+SPECIFY DEPENDENCIES
+Be clear about which libraries and frameworks are acceptable to use.
+
+REQUEST DOCUMENTATION
+Ask for inline comments, docstrings, and usage examples to make the code maintainable.
+
+=================================================================
+
+CONCLUSION
+
+Effective AI-assisted code generation isn't about finding the perfect prompt—it's about systematically applying the TCREI framework and iterating toward the solution you need. Remember: "Thoughtfully Create Really Excellent Inputs" and you'll consistently get high-quality, production-ready code from AI tools.
+
+The key is treating AI as a collaborative coding partner. Provide clear specifications, relevant examples, and don't hesitate to refine your requests until the generated code meets your standards. With practice, this framework will become second nature, dramatically improving your development productivity.
+
+Start simple, iterate frequently, and always evaluate critically before implementing AI-generated code in production systems.
+
+=================================================================

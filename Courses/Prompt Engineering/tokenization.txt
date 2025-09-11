@@ -1,0 +1,30 @@
+11/09/2025
+Tokenization:
+
+Once the prompt is given to LLM,
+The first step is to convert those prompt text into tokens.
+This process is done by "Tokenizer" in LLM.
+Tokens can be whole words, sub words, punctuation.
+
+For example,
+Prompt: "I'm going to Europe!."
+Expected tokens form the prompt: ["I","'","m","go","ing","to","Europe","!","."]
+
+How does tokenizer knows how exactly to split the text???
+How does it know that it should split "going" --> ["go","ing"] not to ["going"].
+
+The answer is tokenizer was pretrained with huge data(not huge as data for LLM training) to how to split the texts.
+Most used tokenization training methods for tokenizer,
+1.Byte per Encoding (BPE):
+2.SentencePiece/Unigram LM
+3.Byte-level tokenization
+
+"GOING" vs ["GO","ING"]
+If the tokenizer is trained on more "GO" words then it will split GOING into GO,ING.
+If the tokenizer is trained on more "GOING" word rather than "GO" then it might consider "GOING" as single token.
+
+Tokenization is always depends on tokanizer and its training data.
+
+Note : Tokenizer training is separate from LLM model training.
+Tokenizer = dictionary builder (decides the “alphabet” of tokens).
+LLM = storyteller (uses that alphabet to learn language patterns).

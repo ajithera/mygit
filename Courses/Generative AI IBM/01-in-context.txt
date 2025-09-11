@@ -1,0 +1,10 @@
+In context learning
+
+Prompt Engineering Framework
+Task
+Context
+References
+Evaluate
+Iterate
+
+"Thoughtfully Create Really Excellent Inputs"

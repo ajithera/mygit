@@ -2,6 +2,10 @@ Temperature
 top-p
 top-k
 
+These are all filtering mechanism of tokens.
+Before this understand the tokenization concepts from tokenization.txt
+
+Note:-----------------------------------------------------------------
 These settings are not configureable for public access llms. 
 These are configureable in API's like creating new llm application.
 we can define those properties according to the need of application.
@@ -14,7 +18,7 @@ Gemini JSON snippet for config:
   "topP": 1,
 }
 ```
-
+---------------------------------------------------------------------
 Temperature:
 Temperature controls the creativeness of the output.
 Low temperature (0.1-0.4): Less Creative (Technical work, document generation, formal communication)
@@ -86,3 +90,33 @@ This comment is informal, conversational, and uses metaphors ("sweet spot," "sha
 While it might be charming in a personal project or a tutorial for beginners, 
 it is unprofessional and distracting in a production codebase. 
 It introduces the risk of being unclear and is generally not suitable for technical tasks.
+
+
+Top-K:
+It is also the filtering the tokens.
+If the likely tokens for next word is 50000 and top-k value is 50 then it will pick from top 50 tokens with hight probability.
+All other words will be ignored.
+
+Smaller Top-K value : More focused and less surprising.
+Large Top-K value: More diverse and creative output.
+
+Top-P:
+It is also another filtering method of tokens.
+From the top-K tokens it again filter the tokens based on cumulative probability.
+If top-p = 0.9, then it will add probability of tokens from top order. 
+Once the cumalative >= 0.9 it ignore all other tokens.
+
+top-p = 0.9
+
+token1 = 0.4 (cumalative = 0.4)
+token2 = 0.35 (cumalative = 0.75)
+token3 = 0.3 (cumalative = 1.05) Here it crosses the top-p value.
+token4 = 0.25 
+
+From the above example llm picks the word from top 3 tokens. Ignore the rest.
+
+
+Execution tree:
+First temperature condition is applied.
+From that top-k is applied.
+From that top-p is applied.

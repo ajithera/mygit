@@ -1,0 +1,42 @@
+13/09/2025
+Vector Database:
+It is used to store the data that are not part of LLM's training.
+The data are mostly private/personal data.
+It is knowledge base for llm in RAG.
+Usecase:
+if the company creating chatbot for its internal purpose, All the company documents are stored in vectorDB.
+When user queries about leave policy in chatbot, llm read the data from vectordb and provides the output.
+
+Working:
+All the documents, files are stored as embeddings in vectordb.
+LLM convert the input prombt to embeddings and do the similarity search in vectordb and retrive the data.
+LLM polises the data retrived and generate the readable format to output.
+
+NOTE:
+1.Chunking
+    You don’t store whole documents.
+    You break them into chunks (e.g., 200–500 tokens each).
+    Why? Because embeddings work best on smaller pieces → retrieval is more accurate.
+2.Metadata
+    Along with embeddings, you also store metadata (file name, author, date, tags, etc.).
+    This helps you filter. 
+    Example:
+    “Show me HR policies updated in 2024” → You filter embeddings by metadata before retrieval.
+3.Hybrid Search (Embeddings + Keywords)
+    Vector search = great for meaning (“solar system planets”).
+    Keyword search = great for exact matches (“policy ID 1234”).
+    Many vector DBs combine both → more accurate answers.
+4.Freshness (Updating Data)
+    Vector DB lets you add/remove/update knowledge dynamically.
+    Unlike retraining an LLM, you can just re-embed new docs and insert them into the DB.
+5.Scalability
+    If your AI agent will grow to 1,000s of documents, performance matters.
+    Vector DBs are optimized for fast similarity search (using indexes like HNSW).
+    Otherwise, searching would be too slow.
+6.Agent Use Case
+    The vector DB becomes the agent’s memory.
+    Example: 
+    An employee asks: “Summarize last week’s meeting notes and email me action items.”
+        --> Agent queries vector DB → retrieves meeting chunks.
+        --> LLM summarizes.
+        --> Agent uses Gmail API to send mail.

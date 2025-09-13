@@ -1,4 +1,4 @@
 13/09/2025
-In-Context Learning:
-The LLM generates the response based on the given context from the prompt.
-Context is how and why part of the prompt.
+In-Context Learning: (refer prompt_framework.txt)
+The LLM learn the background of the request from context in the prompt and uses its pre-trained knowledge to provide output.
+Context is how and why(Bakcground) part of the prompt. 

@@ -1,0 +1,22 @@
+13/09/2025
+Langchain:
+It is a opensource python library.
+It is used to create AI applications by Integrate LLM models to application.
+
+It chains the following process together for a application.
+1.Retrieval
+2.Extraction
+3.Processing
+4.Generation
+
+Pros:
+Modularity - (Resuablilty of functions.)
+Extensionbility - (Extend the applications by allowing new features)
+Decomposition capability - (Breaking down complex queries into smaller manageable tasks)
+Easily integrate with vector databases - (For efficient semantic searches and information Retrieval)
+
+Practical applications:
+1.Content Summarization
+2.Data Extraction
+3.QA system
+4.Automated Content Generation

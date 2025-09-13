@@ -1,0 +1,36 @@
+input prompt --> prompt to tokens(by tokenizer) --> Embeddings assigned to tokens by embedding matrix
+
+User Prompt → Tokenizer → Tokens → Embedding Matrix Lookup
+→ Embeddings → Transformer Layers (attention + weights)
+→ Probability distribution over next tokens
+→ Sampling (temperature, top-k, top-p) → Output token
+→ Repeat until full answer is generated
+
+
+1.User prompt → Tokenizer
+"Explain solar system" → [Explain] [solar] [system].
+
+2.Tokens → Embeddings
+Each token looked up in the embedding matrix (pre-trained during training).
+So now the model has vectors that represent the meaning of those words.
+
+3.Embeddings → Transformer layers
+This is the engine.
+The embeddings go through multiple transformer blocks (attention + feedforward).
+The final layer outputs a probability distribution over the entire vocabulary.
+Example:
+“The” → 0.65
+“It” → 0.20
+“Solar” → 0.08
+… thousands of other tokens with smaller probabilities.
+👉 So the transformer assigns the probabilities, not the embedding matrix.
+The embeddings just give the input meaning.
+
+4.Sampling from probabilities
+Now you apply temperature, top-k, top-p to this probability distribution.
+Example:
+With low temperature → always pick “The” (most probable).
+With higher temperature → maybe “It” or “A” could be picked instead.
+
+5.Output token is chosen → added to context
+Then step repeats → predict next token.

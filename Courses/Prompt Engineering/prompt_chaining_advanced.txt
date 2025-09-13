@@ -1,12 +1,18 @@
 Prompt chaining techniques:
-Chain-of-thought
+Chain-of-thought(COT)
 Tree-of-thought
 
 Chain-of-thought
 Explaining the step by step resoning how llm get into the output.
 Example: In maths, explain the steps how the output was derived.
+
 We can ask llm to provide its reasoning for the output using prompts like "explain your reasoning" or "go step by step".
 By this we can redirect the llm to get more desired output.
+
+Check consistency:
+Using COT we can verify the consistency of the llm.
+Provide simple maths problem and ask llm to provide three various methods and explanations for the problem and give best output from it.
+By this we can check the llm accuracy. because answer for the maths is always same.
 
 prompt --> reasoning stage1 --> reasoning stage2 --> reasoning stageN --> output
 

@@ -2,3 +2,5 @@
 In-Context Learning: (refer prompt_framework.txt)
 The LLM learn the background of the request from context in the prompt and uses its pre-trained knowledge to provide output.
 Context is how and why(Bakcground) part of the prompt. 
+
+The prompt_styles.txt explains the in-context Learning by prompt styles.

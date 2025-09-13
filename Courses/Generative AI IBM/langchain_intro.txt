@@ -16,7 +16,8 @@ Decomposition capability - (Breaking down complex queries into smaller manageabl
 Easily integrate with vector databases - (For efficient semantic searches and information Retrieval)
 
 Practical applications:
-1.Content Summarization
-2.Data Extraction
-3.QA system
-4.Automated Content Generation
+AI Agent applications.
+
+Tools:
+Prompt templates
+    Langchain uses prompt templates to more effective output.

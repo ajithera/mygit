@@ -1,0 +1,12 @@
+13/09/2025
+LLMs learns from the context provided in the prompt called in-context learning.
+There are types of prompts in in-context learning.
+1. Zero-shot prompt
+    Zero reference/context.
+    The prompt is provided without any context and reference/example.
+    For this prompt, LLM solely depends on it pretrained knowledge.
+2. One-shot prompt:
+    One example/reference are provided in prompt.
+    LLM refer the examples to generate output.
+3. Few-shot prompt:
+    More than two reference/examples are provided in prompt.

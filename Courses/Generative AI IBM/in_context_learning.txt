@@ -1,0 +1,4 @@
+13/09/2025
+In-Context Learning:
+The LLM generates the response based on the given context from the prompt.
+Context is how and why part of the prompt.

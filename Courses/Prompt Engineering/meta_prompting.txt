@@ -1,0 +1,32 @@
+13/09/2025
+Meta prompting;
+Meta prompting is a technique to design/generate the prompt by llm.
+It is also referred as "automatic prompt engineering".
+User can give a use case to llm to generate the prompt for that usecase, then llm can generate the prompt.
+That prompt again used against llm to get more desired output.
+
+Meta prompt chaining:
+Ask to generate the prompt and by iterating we can fine tune to prompt, to be used.
+
+IMPORTANT USECASE: META PROMPTING TECHNIQUE CAN BE TO CREATE PROMPT TEMPLATES FOR AI AGENTS.
+
+Meta prompting is mostly used for two strategies,
+1.Prompt Generation Strategy - Create a new prompt from the scratch.
+2.Prompt Refinement Strategy - Fine-tune the existing prompt.
+
+1.Prompt Generation Strategy:
+Example Prompts:
+Use case: Need a content for job offer letter for the candidates.
+prompt: prompt should provide the content for use case.(from Meta Prompt)
+Meta prompt: "Generate a prompt that could help write a job offer letter to our top candidates."
+
+Image as input: 
+Use case: Need to generate similer image.
+Prompt : Define the image details (from Meta prompt)
+Meta-Prompt : "You paste the image into the prompt, and write: 
+Generate a prompt I can use to create the perfect logo for my dog food company that evokes the style of the attached image."
+
+2.Prompt refinement Strategy:
+Usecases:
+1."<old prompt for python code generation>" How can modify this old prompt to create more robust python code with following instructions "<instructions>".
+2. If we have multiple prompts for various tasks, we can paste all to llm to generate single prompt.

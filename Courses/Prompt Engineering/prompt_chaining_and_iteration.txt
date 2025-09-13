@@ -1,0 +1,26 @@
+13/09/2025
+Prompt Chaining:
+Breaking a complex task into smaller steps and use the output of one prompt to the input of another prompt.
+Generate new output from the previous inputs.
+
+Prompt 1: “List the major components of an ETL pipeline for migrating data from MySQL to BigQuery.”
+→ Output: Extraction, Transformation, Load, Monitoring, Error Handling.
+
+Prompt 2: “Expand the Transformation step with detailed sub-tasks and best practices for handling schema evolution.”
+→ Output: Data type mapping, Null handling, Deduplication, Audit logs.
+
+Prompt 3: “Generate a draft architecture diagram description based on the above steps.”
+→ Output: Description of GCS → Dataflow → BigQuery → Looker.
+
+Prompt Iteration:
+Modifying the sinle prompt to get desired output by multiple reattempts.
+Redefine the same output to desired state.
+
+Prompt 1: “Write a LinkedIn headline for a GCP Data Engineer.”
+→ Output: “Data Engineer | GCP | BigQuery | Cloud Functions”
+
+Prompt 2 (iteration): “Make it more catchy and highlight migration expertise.”
+→ Output: “GCP Data Engineer | BigQuery Expert | Driving Seamless Data Migrations to the Cloud”
+
+Prompt 3 (iteration): “Shorten it to under 80 characters.”
+→ Output: “GCP Data Engineer | BigQuery & Data Migration Specialist”

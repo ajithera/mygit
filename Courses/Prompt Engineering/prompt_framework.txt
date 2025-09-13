@@ -1,0 +1,8 @@
+13/09/2025:
+Prompt Framework:
+"Thoughtfully Create Really Excellent Inputs"
+T - Task (What to do?)
+C - Context (How and Why?)
+R - Reference (Examples)
+E - Evalute
+I - Iterate

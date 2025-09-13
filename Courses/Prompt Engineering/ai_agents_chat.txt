@@ -1,0 +1,34 @@
+13/09/2025
+AI AGENTS:
+We can turn chat window into specific ai agents.
+To create ai agents we will follow the same prompt framework(TCREI) but more details on persona and context.
+
+Steps to create AI Agents:
+1. Assign persona
+Ex: "Act like a successful personal fitness trainer and talented nutritionist.”
+2. Give context about the scenario and conversation.
+Ex: “I’m looking to improve my overall fitness and adopt a healthier lifestyle.”
+3. Specify conversation types to support.
+Ex: “Ask me about my workout routines and meal planning and give me feedback.”
+4. Provide stop phrase.
+Ex: “When I want the conversation to end, I’ll write, ‘no pain, no gain.’”
+5. Request takeaway.
+Ex: “At the end of our conversation, provide a summary of the advice you provided.”
+
+Complete prompt is,
+ "Act like a successful personal fitness trainer and talented nutritionist.
+  I’m looking to improve my overall fitness and adopt a healthier lifestyle.
+  Ask me about my workout routines and meal planning and give me feedback.
+  When I want the conversation to end, I’ll write, ‘no pain, no gain.’
+  At the end of our conversation, provide a summary of the advice you provided.”
+
+AI Agents Ideas:
+Agents can be anything.
+It can be tutor if you want to learn anything.
+It can be coding partner.
+It can be document creator for the developed code.
+It can be designer for your new website.
+It can roleplay as the client and give you feedback about your pitch to clients.
+It can be reviewer or interviewer for the provided resume or job description.
+
+Efficient prompts creates efficient Agents.

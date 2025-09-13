@@ -1,0 +1,22 @@
+Prompt chaining techniques:
+Chain-of-thought
+Tree-of-thought
+
+Chain-of-thought
+Explaining the step by step resoning how llm get into the output.
+Example: In maths, explain the steps how the output was derived.
+We can ask llm to provide its reasoning for the output using prompts like "explain your reasoning" or "go step by step".
+By this we can redirect the llm to get more desired output.
+
+prompt --> reasoning stage1 --> reasoning stage2 --> reasoning stageN --> output
+
+Deepseek LLM displays its reasoning steps while processing for the output.
+
+Tree-of-thoughts
+Multiple branches of reasonings happens parallal and chooses the best one for the output.
+
+prompt   --> reasoning1 --> reasoning stage1 --> reasoning stage2 --> reasoning stageN --> output
+        |
+         --> reasoning2 -->  reasoning stage1 (reasoning stopped llm choose reasoning1 as best option than reasoning2)
+        |
+         --> reasoningN --> reasoning stage2 --> reasoning stage1 (reasoning stopped llm choose reasoning1 as best option than reasoning2)

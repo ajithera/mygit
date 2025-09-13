@@ -96,6 +96,7 @@ Top-K:
 It is also the filtering the tokens.
 If the likely tokens for next word is 50000 and top-k value is 50 then it will pick from top 50 tokens with hight probability.
 All other words will be ignored.
+Once the pool is selected, the probabilities are reset for next top-p filteration.
 
 Smaller Top-K value : More focused and less surprising.
 Large Top-K value: More diverse and creative output.

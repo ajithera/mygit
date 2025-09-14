@@ -1,0 +1,23 @@
+14/09/2025
+JIRA:
+
+Key Terms:
+Sprint
+Efforts
+Acceptance Criteria
+Backlog
+Velocity
+Board
+
+HIERARCHY:
+Spaces(Prev called as projects) --> Epic --> User Stories --> Tasks
+
+Spaces:
+It is root for all the work yet to be done.
+
+Epic:
+For each functionality epic is created.
+It is created for respective teams as per their work.
+
+User Stories:
+

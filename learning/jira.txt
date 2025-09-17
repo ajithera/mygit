@@ -14,10 +14,23 @@ Spaces(Prev called as projects) --> Epic --> User Stories --> Tasks
 
 Spaces:
 It is root for all the work yet to be done.
+Can have multiple epics.
 
 Epic:
 For each functionality epic is created.
 It is created for respective teams as per their work.
-
+Ex: 
+Epic1: Migrate Oracle to BigQuery
+Epic2: Migration reporting layer
 User Stories:
+It is functional level task tracker.
+It contains all the task related to each functionality.
+Ex: 
+Epic1:
+US1: Design Bigquery Schema
+US2: Ingestion to Bigquery
+Epic2:
+Story 1: Recreate dashboards in Looker
+Story 2: Validate data with QA team
 
+Task:

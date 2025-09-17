@@ -1,0 +1,6 @@
+15/09/2025
+Prompt template:
+Prompt templates are the backbone of AI application.
+It is solely responsible for the good output.
+
+A prompt template should contains following

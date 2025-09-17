@@ -1,5 +1,6 @@
 13/09/2025
 LLMs learns from the context provided in the prompt called in-context learning.
+So it is always good to provide more detailed context and reference.
 There are types of prompts in in-context learning.
 1. Zero-shot prompt
     Zero reference/context.

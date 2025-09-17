@@ -1,5 +1,6 @@
 13/09/2025
 Meta prompting;
+Asking llm to generate a prompt.
 Meta prompting is a technique to design/generate the prompt by llm.
 It is also referred as "automatic prompt engineering".
 User can give a use case to llm to generate the prompt for that usecase, then llm can generate the prompt.

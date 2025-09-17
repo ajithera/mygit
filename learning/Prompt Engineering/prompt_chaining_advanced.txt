@@ -3,7 +3,7 @@ Chain-of-thought(COT)
 Tree-of-thought
 
 Chain-of-thought
-Explaining the step by step resoning how llm get into the output.
+Explaining the step by step resoning(thought process) how llm get into the output.
 Example: In maths, explain the steps how the output was derived.
 
 We can ask llm to provide its reasoning for the output using prompts like "explain your reasoning" or "go step by step".

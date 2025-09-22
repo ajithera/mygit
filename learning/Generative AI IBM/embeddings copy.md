@@ -1,0 +1,31 @@
+13/09/2025
+# Embeddings:
+*   Embeddings are the list of numbers assigned to words, sentences, documents.
+*   This numbers are also called vectors.
+*   These numbers are randomly assigned by LLM itself during training. 
+*   Then it adjusted numbers as per training. The final embeddings of llms are very structured and meaningful.
+*   Embeddings are not human readable.
+*   Each number refer the dimensions in multi dimensions space.(N number of dimensions).
+
+```
+For example,
+    apple → [0.12, -0.54, 0.98, ...]
+    Here, each number refer the dimensions like ["fruit","eatable","tree","red in color"...N]
+for orange → [0.11, -0.50, 0.95, ...]
+```
+both apple and orange shares close dimensional values because both are sharing many commonalities like fruit, eatable, sweet,..etc.
+
+Embedding Matrix:
+It is created while LLMs are trained.
+Assume it is giant lookup table or dictionary.
+All the words and its embeddings are stored in this matrix.
+Working:
+Once the input prompt are convertied to tokens. 
+This Embedding Matrix are assigned relevent embeddings to the table from the lookup table.
+Then probability are assigned to the words (Transformer from LLM will do this job).
+Then temperature, top-k, top-p conditions are applied.
+
+
+Probability
+Tokens
+Embeddings

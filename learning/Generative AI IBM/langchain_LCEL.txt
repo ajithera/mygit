@@ -1,0 +1,4 @@
+22/09/2025
+LCEL - LangChain Expression Language
+
+-- This needs to be learned

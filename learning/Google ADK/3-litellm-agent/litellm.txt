@@ -1,0 +1,14 @@
+24/09/2024
+Litellm :
+
+It is a centralised framework to handle all the models.
+
+Why?
+If you want to use 'OpenAI' you have to download OpenAI SDK to use and configure the GPT models.
+If you want to use 'Gemini' you have to download Gemini SDK to use and configure the model.
+Because of this if you want to switch between models you have to rewrite the entire code with respective to model we want to use.
+
+This issue can solved by litellm. 
+Onle library handles everything. we just need to choose the model.
+It will handle everything on configure part.
+

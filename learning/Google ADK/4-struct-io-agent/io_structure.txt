@@ -1,0 +1,45 @@
+26/09/2025
+Structuring Input/Output of the LLM:
+We can make llm to generate output in specific formats like json or any key-value format.
+Also we can make llm to accept the input in specific format to process like json.
+
+Why do we need this?
+To make multi agent model, one agent generate output in specific format and give it to next agent.
+This is kind of efficient way to make agents communicate instead of Natural language inputs/outputs.
+
+How do we do this?
+"Pydantic" is python library to verify,create the formats for the inputs and outputs.
+
+We can create a model in Pydantic (model is like a custom datatype).
+
+sample Pydantic code:
+"""
+from pydantic import BaseModel, Field
+
+class EmailContent(BaseModel):
+    subject: str = Field(
+        description="The subject line of the email. Should be concise and descriptive"
+    )
+    body: str = Field(
+        description="The main content of the email. Should be well formatted with proper greeting, paragraphs, and signature"
+    )
+"""
+
+All the structure is defined from BaseModel.
+Here we are creating structure called "EmailContent"
+Which contains two string fields subject and body. The "Field", we are explaining llm about what is subject and body.
+
+Once we defined model. We have to ask llm to generate the output in specific format.
+
+Example:
+Prompt should include below details.
+"""
+    IMPORTANT: Your response MUST be valid JSON matching this structure:
+    {
+        "subject": "Subject Line Here",
+        "body": "Email body here with proper paragraphs and formatting",
+    }
+"""
+
+So the generated output will be passed to the Class we created using pydantic. 
+Then pydantic will verify the output whether is generated output based on the defined values.

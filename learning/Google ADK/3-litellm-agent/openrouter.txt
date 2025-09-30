@@ -1,0 +1,5 @@
+It is a centralised service that routes request to different models.
+
+Instead of subscribing different model openrouter subsription allows user to use multiple models.
+We can use freely available models as well. ex DeepSeek Free, xAI Free.
+We can use same API key for multiple models.

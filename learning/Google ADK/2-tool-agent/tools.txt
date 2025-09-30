@@ -1,0 +1,8 @@
+23/09/2025
+tools are used to support the agent.
+Two types of tools available.
+built-in tool - Readily available by adk.( Ex: google-search)
+custom tools - Custom python functions that can be used by llm.
+
+We can ask llm to use the tools if neccessary.
+Llm can execute python script and get the output.

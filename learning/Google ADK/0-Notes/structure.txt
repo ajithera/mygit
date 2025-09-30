@@ -1,0 +1,4 @@
+The folder name is a agent name in web.
+It should contains __init__.py
+.env
+agent.py

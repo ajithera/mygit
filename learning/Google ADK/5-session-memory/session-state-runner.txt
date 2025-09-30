@@ -1,0 +1,17 @@
+28/09/2025
+session state runner
+
+Session:
+It is a interaction thread between user and agent.
+Simply, A chat window.
+Agent knows what you asked throughout a chat history inside that particular session.
+
+State:
+State of llm, in processing of users request.
+For example, User asked one question that requeries 3 steps to generates the output.
+If llm is currently at step 2, then the state is step 2.
+
+Runner:
+Runner is reponsible for executing the llm and current states. 
+"Ok, we have compeleted the step 1 and now i have to call tool to complete step 2."
+The state and runner completes once the output is generated until next task arrives.

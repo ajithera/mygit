@@ -1,0 +1,4 @@
+1. CDC capture
+2. Bucket to Bucket - ETL pipeline (eventarc, gcs, crj, workflows, bigquery)
+3. Pub/Sub to Bigquery --> Bucket - ETL pipeline
+4. Bigquery with dbt

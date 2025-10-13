@@ -1,0 +1,39 @@
+28/09/2025
+session state runner
+
+Session:
+It is a interaction thread between user and agent.
+Simply, A chat window.
+Agent knows what you asked throughout a chat history inside that particular session.
+
+State:
+State of llm, in processing of users request.
+For example, User asked one question that requires 3 steps(including calling tools or other agent) to generates the output.
+If llm is currently at step 2, then the state is step 2.
+
+Runner:
+Runner is reponsible for executing the llm and current states. 
+"Ok, we have compeleted the step 1 and now i have to call tool to complete step 2."
+The state and runner completes once the output is generated until next task arrives.
+To create a runner, we need to have a session and atleast one agent.
+RUNNER starts the session and manages the state and take action as per request.
+
+
+initial_state - giving heads up to the agent what the session is about. Inital context to the agent.
+
+13/Oct/2025
+
+app_id and user_id:
+These details are provided when creating session and executing runner.
+App - Setting environment for an agent to capture session, state and runner details.
+Session, state and memory details are stored in app with given app_id.
+WHY?
+This app is used to recall the past interactions and memory.
+Even though if we select only 'session level memory' these details are stored in app only.
+In multi-agent framework we can have single app to store the details so that as an application (multi-agent application) all the agents know what is happening across the other agents.
+This is to provide better results.
+
+user_id:
+It is sub part of the App. All the memory details are stored inside the App for the specific user.
+
+

@@ -1,0 +1,5 @@
+16/Oct/2025
+
+Types module in genAI used for manage the conversation details.
+
+types.Content - This section is used to represent the single conversation of message.

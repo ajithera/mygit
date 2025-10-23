@@ -23,10 +23,10 @@ initial_state - giving heads up to the agent what the session is about. Inital c
 
 13/Oct/2025
 
-app_id and user_id:
+app_name and user_id:
 These details are provided when creating session and executing runner.
 App - Setting environment for an agent to capture session, state and runner details.
-Session, state and memory details are stored in app with given app_id.
+Session, state and memory details are stored in app with given app_name.
 WHY?
 This app is used to recall the past interactions and memory.
 Even though if we select only 'session level memory' these details are stored in app only.
@@ -35,5 +35,22 @@ This is to provide better results.
 
 user_id:
 It is sub part of the App. All the memory details are stored inside the App for the specific user.
+It may be human or external system which uses the agent.
+Multiple users can use same app.
 
-
+/app_name/
+  ├── /user_id_1/
+  │     ├── /session_001/
+  │     │      ├── state.json
+  │     │      └── runner.log
+  │     ├── /session_002/
+  │     │      ├── state.json
+  │     │      └── runner.log
+  │     └── memory.json
+  │
+  ├── /user_id_2/
+  │     ├── /session_001/
+  │     ├── ...
+  │     └── memory.json
+  │
+  └── /shared_memory/  (optional, visible to all agents)

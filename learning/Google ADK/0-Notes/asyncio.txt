@@ -1,0 +1,3 @@
+asyncio library is used to execute functions asynchronously that means if we run a multiple functions 
+it wont wait for first function to compelete it execute second function while first function is still running to get result.
+

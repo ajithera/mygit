@@ -7,10 +7,12 @@ Google Cloud CLI Essentials
 	gcloud auth application-default login
 
 3. Set Project ID:
-	gcloud config set project <PROJECT_ID>
-
+	gcloud config set project ford-cde6c43fb8d3c9c22d7e139a
+	gcloud auth application-default set-quota-project ford-cde6c43fb8d3c9c22d7e139a
 4. Impersonate a Service Account (for a single command):
 	gcloud <COMMAND> --impersonate-service-account=<SERVICE_ACCOUNT_EMAIL>
 
 5. Set Impersonation as Default (for all commands in session):
 	gcloud config set auth/impersonate_service_account <SERVICE_ACCOUNT_EMAIL>
+
+ford-cde6c43fb8d3c9c22d7e139a
